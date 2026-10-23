@@ -200,6 +200,7 @@ def  draw9():
     t.right(90)
     t.penup()
     t.forward(20)
+
 def drawpoint():
     t.right(90)
     t.forward(17)
@@ -209,6 +210,84 @@ def drawpoint():
     t.back(20)
     t.left(90)
     t.forward(20)
+def drawminus():
+    t.pendown()
+    t.forward(10)
+    t.penup()
+    t.forward(20)
+def drawe():
+    t.pendown()
+    t.forward(20)
+    t.left(90)
+    t.forward(20)
+    t.left(90)
+    t.forward(20)
+    t.left(90)
+    t.forward(40)
+    t.left(90)
+    t.forward(20)
+    t.left(90)
+    t.penup()
+    t.forward(20)
+    t.right(90)
+    t.forward(20)
+
+
+
+def drawplus():
+    t.pendown()
+    t.forward(40)
+    t.back(20)
+    t.left(90)
+    t.forward(20)
+    t.back(40)
+    t.forward(20)
+    t.right(90)
+    t.penup()
+    t.forward(40)
+
+
+
+
+def draw_digit(digit):
+    if digit == "0":
+        draw0()
+    elif digit == "1":
+        draw1()
+    elif digit == "2":
+        draw2()
+    elif digit == "3":
+        draw3()
+    elif digit == "4":
+        draw4()
+    elif digit == "5":
+        draw5()
+    elif digit == "6":
+        draw6()
+    elif digit == "7":
+        draw7()
+    elif digit == "8":
+        draw8()
+    elif digit == "9":
+        draw9()
+    elif digit == "-":
+        drawminus()
+    elif digit == ".":
+        drawpoint()
+    elif digit == "e":
+        drawe()
+    elif digit == "+":
+        drawplus()
+
+ans = "10.768476e+"
+
+
+def test4():
+    text = str(ans)
+    for ch in text:
+        draw_digit(ch)
+
+test4()
 
 while 9 > 1:
     t.speed(0.5)

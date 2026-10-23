@@ -204,53 +204,6 @@ def  draw9():
 num1 = int(input(""))
 
 
-def num_make1():
-    if num1 == 0:
-       draw0()
-    elif num1 == 1:
-        draw1()
-    elif num1 == 2:
-        draw2()
-    elif num1 == 3:
-        draw3()
-    elif num1 == 4:
-        draw4()
-    elif num1 == 5:
-        draw5()
-    elif num1 == 6:
-        draw6()
-    elif num1 == 7:
-        draw7()
-    elif num1 == 8:
-        draw8()
-    else:
-        draw9()
-
-num1 = int(input(""))
-
-
-def num_make1():
-    if num1 == 0:
-       draw0()
-    elif num1 == 1:
-        draw1()
-    elif num1 == 2:
-        draw2()
-    elif num1 == 3:
-        draw3()
-    elif num1 == 4:
-        draw4()
-    elif num1 == 5:
-        draw5()
-    elif num1 == 6:
-        draw6()
-    elif num1 == 7:
-        draw7()
-    elif num1 == 8:
-        draw8()
-    else:
-        draw9()
-
 
 
 while 9 > 1:
