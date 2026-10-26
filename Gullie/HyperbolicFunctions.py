@@ -366,13 +366,11 @@ while again == True:
             ans = kve(x, y)
             print(ans)
 
+    def test4():
+        text = str(ans)
+        for ch in text:
+            draw_digit(ch)
 
-
-def test4():
-    text = str(ans)
-    for ch in text:
-        draw_digit(ch)
-
-test4()
-
+    test4()
+    again = bool(input("Would you like to contiue? (True = continue, False = stop):"))
 
