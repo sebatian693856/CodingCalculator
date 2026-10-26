@@ -1,4 +1,3 @@
-from curses import window
 import math
 
 import numpy as np
@@ -82,10 +81,13 @@ elif function in ["+", "-", "*", "/", "Bessel1", "Bessel2", "Bessel3", "Bessel4"
 
 import turtle
 
+window = turtle.Screen()
+window.bgcolor("black")
+
 x = 10
 
 t = turtle.Turtle()
-window.bgcolor("black")
+
 
 
 t.speed(5)
@@ -371,4 +373,4 @@ def test4():
 
 test4()
 
-t.done()
+

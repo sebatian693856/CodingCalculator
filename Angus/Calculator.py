@@ -436,7 +436,7 @@ def plot_2d():
 
     if all_y_vals:
         y_min, y_max = min(all_y_vals), max(all_y_vals)
-        plt.ylim(y_min - abs(y_min)*0.
+        plt.ylim(y_min - abs(y_min)*0.)
 
     if all_y_vals:
         y_min, y_max = min(all_y_vals), max(all_y_vals)
