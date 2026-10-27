@@ -3,7 +3,7 @@ import math
 import numpy as np
 print(np.__version__)
 import scipy 
-from scipy.special import jv, jve, yn, yv, yve, iv, ive, kn, kv, kve
+from scipy.special import jv, jve, yn, yv, yve, iv, ive, kn, kv, kve, jnyn_zeros, jnjnp_zeros, jn_zeros, jnp_zeros, yn_zeros, ynp_zeros, y0_zeros, y1_zeros, y1p_zeros
 print(scipy.__version__)
 
 import turtle
@@ -295,7 +295,7 @@ again = True
 
 e = math.e
 while again == True:
-    function = str(input("Function - Eg:  +, -, *, /, sinh, cosh, tanh, sech, csch, coth, Bessel1 to Bessel10:"))
+    function = str(input("Function - Eg:  +, -, *, /, sinh, cosh, tanh, sech, csch, coth, Bessel1 to Bessel19:"))
     x = float(input("Number:"))
 
     if function == "sinh":
@@ -321,7 +321,7 @@ while again == True:
         ans = (var1 + var2) / (var1 - var2)
         print(ans)
 
-    elif function in ["+", "-", "*", "/", "Bessel1", "Bessel2", "Bessel3", "Bessel4", "Bessel5", "Bessel6", "Bessel7", "Bessel8", "Bessel9", "Bessel10"]:
+    elif function in ["+", "-", "*", "/", "Bessel1", "Bessel2", "Bessel3", "Bessel4", "Bessel5", "Bessel6", "Bessel7", "Bessel8", "Bessel9", "Bessel10", "Besssel11", "Bessel12","Bessel13","Bessel14","Bessel15","Bessel16","Bessel17","Bessel18","Bessel19",]:
         y = float(input("Number2: "))
         if function == "+":
            ans = x + y
@@ -364,6 +364,33 @@ while again == True:
             print(ans)
         elif function == "Bessel10":
             ans = kve(x, y)
+            print(ans)
+        elif function == "Bessel11":
+            ans = jnjnp_zeros(x, y)
+            print(ans)
+        elif function == "Bessel12":
+            ans = jnyn_zeros(x, y)
+            print(ans)
+        elif function == "Bessel13":
+            ans = jn_zeros(x, y)
+            print(ans)
+        elif function == "Bessel14":
+            ans = jnp_zeros(x, y)
+            print(ans)
+        elif function == "Bessel15":
+            ans = yn_zeros(x, y)
+            print(ans)
+        elif function == "Bessel16":
+            ans = ynp_zeros(x, y)
+            print(ans)
+        elif function == "Bessel17":
+            ans = y0_zeros(x, y)
+            print(ans)
+        elif function == "Bessel18":
+            ans = y1_zeros(x, y)
+            print(ans)
+        elif function == "Bessel19":
+            ans = y1p_zeros(x, y)
             print(ans)
 
     def test4():
