@@ -321,7 +321,10 @@ while again == True:
         ans = (var1 + var2) / (var1 - var2)
         print(ans)
 
-    elif function in ["+", "-", "*", "/", "Bessel1", "Bessel2", "Bessel3", "Bessel4", "Bessel5", "Bessel6", "Bessel7", "Bessel8", "Bessel9", "Bessel10", "Besssel11", "Bessel12","Bessel13","Bessel14","Bessel15","Bessel16","Bessel17","Bessel18","Bessel19",]:
+    elif function in ["+", "-", "*", "/", "Bessel1", "Bessel2", "Bessel3",
+                      "Bessel4", "Bessel5", "Bessel6", "Bessel7", "Bessel8",
+                      "Bessel9", "Bessel10", "Besssel11", "Bessel12","Bessel13","Bessel14",
+                      "Bessel15","Bessel16","Bessel17","Bessel18","Bessel19",]:
         y = float(input("Number2: "))
         if function == "+":
            ans = x + y
