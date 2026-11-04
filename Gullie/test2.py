@@ -16,16 +16,28 @@ opponentpaddletall = 100
 wn = pygame.display.set_mode((WIDTH, HEIGHT))
 active = True
 while active:
-    pygame.display.update()
-    for i in pygame.event.get():
-        if i.type == pygame.QUIT:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
             active = False
-    userinput = pygame.key.get_pressed()
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_UP:
+                playerpaddle -= 5
+            if event.key == pygame.K_DOWN:
+                playerpaddle += 5
+            if event.key == pygame.K_w:
+                opponentpaddle -= 5
+            if event.key == pygame.K_s:
+                opponentpaddle += 5
+
+    
 
     pygame.draw.rect(wn, "red", (900, playerpaddle, 20, playerpaddletall))
     pygame.draw.rect(wn, "blue", (100, opponentpaddle, 20, opponentpaddletall))
-    if userinput == pygame.K_UP:
-        playerpaddle += 10
+    pygame.display.update()
+    wn.fill("black")
+
+
+
 
 #    pygame.draw.circle(wn, "BLUE", (ball_x, ball_y), 10)
 #    if ball_x >= 1000:
