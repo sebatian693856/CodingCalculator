@@ -403,4 +403,5 @@ while again == True:
 
     test4()
     again = bool(input("Would you like to contiue? (True = continue, False = stop):"))
+    turtle.bye()
 

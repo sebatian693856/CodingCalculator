@@ -1,4 +1,5 @@
 import pygame
+import random
 pygame.display.set_caption("pong")
 pygame.init()
 
@@ -13,7 +14,8 @@ playerpaddle = 0
 playerpaddletall = 100
 opponentpaddle = 0
 opponentpaddletall = 100
-
+ballupdownspeed = 1
+ragemeter = 0
 wn = pygame.display.set_mode((WIDTH, HEIGHT))
 active = True
 while active:
@@ -22,13 +24,13 @@ while active:
             active = False
     playerinput = pygame.key.get_pressed()
     if playerinput[pygame.K_UP] and playerpaddle >= 0:
-        playerpaddle -= 0.5
+        playerpaddle -= 0.9
     if playerinput[pygame.K_DOWN] and playerpaddle <= 500:
-        playerpaddle += 0.5
+        playerpaddle += 0.9
     if playerinput[pygame.K_w] and opponentpaddle >= 0:
-        opponentpaddle -= 0.2
+        opponentpaddle -= 0.9
     if playerinput[pygame.K_s] and opponentpaddle <= 500:
-        opponentpaddle += 0.2
+        opponentpaddle += 0.9
     pygame.draw.rect(wn, "red", (900, playerpaddle, 20, playerpaddletall))
     pygame.draw.rect(wn, "blue", (100, opponentpaddle, 20, opponentpaddletall))
     pygame.draw.circle(wn, "GREEN", (ball_x, ball_y), 10)
@@ -42,8 +44,10 @@ while active:
         balldirectx = "left"
     if ball_y > 600:
         balldirecty = "down"
+        ballupdownspeed = random.uniform(0.1, 0.5)
     if ball_y < 0:
         balldirecty = "up"
+        ballupdownspeed = random.uniform(0.1, 0.5)
     if ball_x > 1000:
         opponentscore += 1
         ball_x = 500
@@ -53,11 +57,14 @@ while active:
         ball_x = 500
         ball_y = 300
     if balldirectx == "right":
-        ball_x += 0.1
+        ball_x += 0.3
     if balldirectx == "left":
-        ball_x -= 0.1
+        ball_x -= 0.3
     if balldirecty == "up":
-        ball_y += 0.1
+        ball_y += ballupdownspeed
     if balldirecty == "down":
-        ball_y -= 0.1
+        ball_y -= ballupdownspeed
+
+
+    
     wn.fill("black")
